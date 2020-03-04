@@ -1,8 +1,9 @@
-service: serverless-version-1-65-breaking-change
+service: slsV165BreakingChange
 
 provider:
   name: aws
   runtime: nodejs12.x
+  stackName: slsV165BreakingChange-${self:provider.stage}
   stage: ${opt:stage}
   region: eu-central-1
   iamRoleStatements:
@@ -12,12 +13,13 @@ provider:
         - "ssm:DescribeParameters"
       Resource: "arn:aws:ssm:#{AWS::Region}:#{AWS::AccountId}:*"
 
- exclude:
-   - .gitignore
-   - package-lock.json
-   - package.json
-   - README.me
-   - serverless.yml
+package:
+  exclude:
+    - .gitignore
+    - package-lock.json
+    - package.json
+    - README.md
+    - serverless.yml
 
 functions:
   hello:
