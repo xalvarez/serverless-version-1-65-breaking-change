@@ -1,0 +1,14 @@
+{
+  "name": "serverless-version-1-65-breaking-change",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xalvarez/serverless-version-1-65-breaking-change.git"
+  },
+  "author": "Xavier Alvarez",
+  "license": "MIT",
+  "devDependencies": {
+    "serverless": "^1.64.0",
+    "serverless-pseudo-parameters": "^2.5.0",
+    "standard": "^14.3.1"
+  }
+}
