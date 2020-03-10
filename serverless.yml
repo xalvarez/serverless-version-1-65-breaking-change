@@ -3,7 +3,7 @@ service: slsV165BreakingChange
 provider:
   name: aws
   runtime: nodejs12.x
-  stackName: slsV165BreakingChange-${self:provider.stage}
+  stackName: SlsV165BreakingChange-${self:provider.stage}
   stage: ${opt:stage}
   region: eu-central-1
   iamRoleStatements:
