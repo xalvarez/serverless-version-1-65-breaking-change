@@ -4,14 +4,17 @@ provider:
   name: aws
   runtime: nodejs12.x
   stackName: SlsV165BreakingChange-${self:provider.stage}
-  stage: ${opt:stage}
+  stage: test-stage
   region: eu-central-1
   iamRoleStatements:
-    - Effect: "Allow"
+    - Effect: 'Allow'
       Action:
-        - "ssm:GetParameters"
-        - "ssm:DescribeParameters"
-      Resource: "arn:aws:ssm:#{AWS::Region}:#{AWS::AccountId}:*"
+        - 's3:ListBucket'
+      Resource:
+        Fn::Join:
+          - ''
+          - - 'arn:aws:s3:::'
+            - Ref: ServerlessDeploymentBucket
 
 package:
   exclude:
@@ -24,6 +27,3 @@ package:
 functions:
   hello:
     handler: handler.hello
-
-plugins:
-  - serverless-pseudo-parameters

@@ -7,8 +7,6 @@
   "author": "Xavier Alvarez",
   "license": "MIT",
   "devDependencies": {
-    "serverless": "^1.64.0",
-    "serverless-pseudo-parameters": "^2.5.0",
-    "standard": "^14.3.1"
+    "serverless": "^1.64.0"
   }
 }
