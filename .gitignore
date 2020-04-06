@@ -1,6 +1,6 @@
-# package directories
-node_modules
-jspm_packages
+# Hidden files and folders
+.*
+!.gitignore
 
-# Serverless directories
-.serverless
+# Package directories
+node_modules

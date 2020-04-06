@@ -2,11 +2,11 @@
 
 Deploy function using serverless 1.64:
 
-    npx sls deploy -s <stage> -v
+    npx sls deploy -v
 
 The function can be executed as follows:
 
-    npx sls invoke -s <stage> -f hello -l
+    npx sls invoke -f hello -l
 
 Install Serverless 1.65:
 
@@ -15,4 +15,4 @@ Install Serverless 1.65:
 
 Deploy function again:
 
-    npx sls deploy -s <stage> -v
+    npx sls deploy -v
